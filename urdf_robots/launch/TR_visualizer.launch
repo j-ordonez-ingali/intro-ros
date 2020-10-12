@@ -1,0 +1,17 @@
+<launch>
+	<arg name="model"/>
+	<param name="robot_description" textfile="$(find urdf_robots)/urdf/TR.urdf"/>
+	<!--param name="use_gui" value="true"/>
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/-->
+	
+
+
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+	
+	<node name="TR_inverse_kin" pkg="inverse_kin" type="TR_inverse_kin.py"/>	
+
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find urdf_robots)/urdf.rviz" required="true"/>
+
+	<!--node name="urdf_joint_publisher" pkg="urdf_robots" type="urdf_joint_publisher.py"/-->
+
+</launch>

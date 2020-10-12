@@ -1,0 +1,8 @@
+<launch>
+
+  <include file="$(find seven_dof_arm_config)/launch/demo.launch"/>
+
+  <node name="python_interface" pkg="ros_gazebo_pkg" type="python_interface.py" respawn="false" output="screen">
+  </node>
+
+</launch>

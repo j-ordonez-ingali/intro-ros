@@ -1,0 +1,6 @@
+<launch>
+  <node name="int32_publisher" pkg="simple_publisher" type="int32_publisher" output="screen"/>
+  <node name="simple_int32_subscriber" pkg="simple_publisher" type="simple_int32_subscriber" output="screen"/>
+  <node name="float64_publisher" pkg="simple_publisher" type="float64_publisher.py" output="screen"/>
+  <node name="float64_subscriber" pkg="simple_publisher" type="float64_subscriber.py" output="screen" />
+</launch>

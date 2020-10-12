@@ -1,0 +1,9 @@
+<launch>
+	<arg name="model"/>
+	<param name="robot_description" textfile="$(find urdf_robots)/urdf/TRRP.urdf"/>
+	<param name="use_gui" value="true" />
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+	<!--ode name="urdf_joint_publisher" pkg="urdf_robots" type="urdf_joint_publisher.py"/-->
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find urdf_robots)/urdf.rviz" required="true"/>
+</launch>
